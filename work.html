@@ -3,7 +3,7 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Martin Template</title>
+	<title>Statistikat</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
@@ -46,7 +46,43 @@
 	<!--[if lt IE 9]>
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
+   <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
 
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Mohimi i te kontrates', 3],
+          ['Largim nga puna pa perfunduar kontrata', 1],
+          ['Mos dhenja e pages', 1],
+          ['Ngacmime ne pune', 1],
+          ['Te tjera', 2]
+        ]);
+
+        // Set chart options
+        var options = {'title':'Mohimi i te drejtave te punorit ne vendin e punes ne Komunen e Vitises',
+                       'width':1344,
+                       'height':1000};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
 	</head>
 	<body>
 
@@ -58,12 +94,12 @@
 					<div class="row">
 						<div class="col-md-12 text-center">
 							<ul>
-								<li><a href="index.html"><span>Home</span></a></li>
-								<li><a href="about.html"><span>About</span></a></li>
-								<li><a href="services.html"><span>Services</span></a></li>
-								<li class="active"><a href="work.html"><span>Work</span></a></li>
-								<li><a href="blog.html"><span>Blog</span></a></li>
-								<li><a href="contact.html"><span>Contact</span></a></li>
+								<li ><a href="index.html"><span>Rreth Nesh</span></a></li>
+								<li><a href="about.html"><span>Lokacioni</span></a></li>
+								<li><a href="services.html"><span>Raportimet</span></a></li>
+								<li class="active"><a href="work.html"><span>Statistikat</span></a></li>
+							
+								<li><a href="contact.html"><span>Kontakti</span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -78,7 +114,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="colorlib-navbar-brand">
-							<a class="colorlib-logo logo" href="index.html">M.</a>
+							<a class="colorlib-logo" href="index.html">RSHP.</a>
 						</div>
 						<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 					</div>
@@ -90,267 +126,44 @@
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-md-12 col-md-offset-0 text-center animate-box intro-heading intro-heading-2">
-						<span>Work</span>
+						<span>Statistikat</span>
 					</div>
 				</div>
 				<div class="row">
 					
-					<div class="col-md-12 no-gutters">
-						<div class="work-entry-flex animate-box js-fullheight">
-							<div class="col-three-forth js-fullheight">
-								<div class="row no-gutters">
-									<div class="col-md-12 col-md-offset-0 no-gutters">
-										<div class="work-img js-fullheight" style="background-image: url(images/work-1.jpg);">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-one-forth js-fullheight">
-								<div class="row no-gutters">
-									<div class="col-md-12 col-md-offset-0 col-md-pull-2 col-xs-pull-1 no-gutters">
-										<div class="display-t js-fullheight">
-											<div class="display-tc js-fullheight">
-												<div class="text-inner text-inner-left">
-													<p class="tag"><span>Digital Product Design</span>, <span>UI/UX</span></p>
-													<h2><a href="work-single.html">Race template Mobile Application</a></h2>
-													<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
-													<p><a href="work-single.html" class="btn-view">Case Study</a></p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 					
-					<div class="col-md-12 no-gutters">
-						<div class="work-entry-flex animate-box js-fullheight">
-							<div class="col-three-forth js-fullheight">
-								<div class="row no-gutters">
-									<div class="col-md-12 col-md-offset-0 col-md-push-12 no-gutters">
-										<div class="work-img js-fullheight" style="background-image: url(images/work-2.jpg);">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-one-forth js-fullheight">
-								<div class="row no-gutters">
-									<div class="col-md-12 col-md-pull-10 col-md-offset-0 col-xs-pull-1 no-gutters">
-										<div class="display-t js-fullheight">
-											<div class="display-tc js-fullheight">
-												<div class="text-inner text-inner-left">
-													<p class="tag"><span>Digital Product Design</span>, <span>UI/UX</span></p>
-													<h2><a href="work-single.html">Race template Mobile Application</a></h2>
-													<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
-													<p><a href="work-single.html" class="btn-view">Case Study</a></p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-md-12 no-gutters">
-						<div class="work-entry-flex animate-box js-fullheight">
-							<div class="col-three-forth js-fullheight">
-								<div class="row no-gutters">
-									<div class="col-md-12 col-md-offset-0 no-gutters">
-										<div class="work-img js-fullheight" style="background-image: url(images/work-3.jpg);">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-one-forth js-fullheight">
-								<div class="row no-gutters">
-									<div class="col-md-12 col-md-offset-0 col-md-pull-2 col-xs-pull-1 no-gutters">
-										<div class="display-t js-fullheight">
-											<div class="display-tc js-fullheight">
-												<div class="text-inner text-inner-left">
-													<p class="tag"><span>Digital Product Design</span>, <span>UI/UX</span></p>
-													<h2><a href="work-single.html">Race template Mobile Application</a></h2>
-													<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
-													<p><a href="work-single.html" class="btn-view">Case Study</a></p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 					
-					<div class="col-md-12 no-gutters">
-						<div class="work-entry-flex animate-box js-fullheight">
-							<div class="col-three-forth js-fullheight">
-								<div class="row no-gutters">
-									<div class="col-md-12 col-md-offset-0 col-md-push-12 no-gutters">
-										<div class="work-img js-fullheight" style="background-image: url(images/work-4.jpg);">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-one-forth js-fullheight">
-								<div class="row no-gutters">
-									<div class="col-md-12 col-md-pull-10 col-md-offset-0 col-xs-pull-1 no-gutters">
-										<div class="display-t js-fullheight">
-											<div class="display-tc js-fullheight">
-												<div class="text-inner text-inner-left">
-													<p class="tag"><span>Digital Product Design</span>, <span>UI/UX</span></p>
-													<h2><a href="work-single.html">Race template Mobile Application</a></h2>
-													<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
-													<p><a href="work-single.html" class="btn-view">Case Study</a></p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-md-12 no-gutters">
-						<div class="work-entry-flex animate-box js-fullheight">
-							<div class="col-three-forth js-fullheight">
-								<div class="row no-gutters">
-									<div class="col-md-12 col-md-offset-0 no-gutters">
-										<div class="work-img js-fullheight" style="background-image: url(images/work-5.jpg);">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-one-forth js-fullheight">
-								<div class="row no-gutters">
-									<div class="col-md-12 col-md-offset-0 col-md-pull-2 col-xs-pull-1 no-gutters">
-										<div class="display-t js-fullheight">
-											<div class="display-tc js-fullheight">
-												<div class="text-inner text-inner-left">
-													<p class="tag"><span>Digital Product Design</span>, <span>UI/UX</span></p>
-													<h2><a href="work-single.html">Race template Mobile Application</a></h2>
-													<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
-													<p><a href="work-single.html" class="btn-view">Case Study</a></p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+		
+<div id="chart_div" style="position:center"></div>
 					
-					<div class="col-md-12 no-gutters">
-						<div class="work-entry-flex animate-box js-fullheight">
-							<div class="col-three-forth js-fullheight">
-								<div class="row no-gutters">
-									<div class="col-md-12 col-md-offset-0 col-md-push-12 no-gutters">
-										<div class="work-img js-fullheight" style="background-image: url(images/work-6.jpg);">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-one-forth js-fullheight">
-								<div class="row no-gutters">
-									<div class="col-md-12 col-md-pull-10 col-md-offset-0 col-xs-pull-1 no-gutters">
-										<div class="display-t js-fullheight">
-											<div class="display-tc js-fullheight">
-												<div class="text-inner text-inner-left">
-													<p class="tag"><span>Digital Product Design</span>, <span>UI/UX</span></p>
-													<h2><a href="work-single.html">Race template Mobile Application</a></h2>
-													<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
-													<p><a href="work-single.html" class="btn-view">Case Study</a></p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
 
-					<div class="col-md-12 no-gutters">
-						<div class="work-entry-flex animate-box js-fullheight">
-							<div class="col-three-forth js-fullheight">
-								<div class="row no-gutters">
-									<div class="col-md-12 col-md-offset-0 no-gutters">
-										<div class="work-img js-fullheight" style="background-image: url(images/work-7.jpg);">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-one-forth js-fullheight">
-								<div class="row no-gutters">
-									<div class="col-md-12 col-md-offset-0 col-md-pull-2 col-xs-pull-1 no-gutters">
-										<div class="display-t js-fullheight">
-											<div class="display-tc js-fullheight">
-												<div class="text-inner text-inner-left">
-													<p class="tag"><span>Digital Product Design</span>, <span>UI/UX</span></p>
-													<h2><a href="work-single.html">Race template Mobile Application</a></h2>
-													<p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country.</p>
-													<p><a href="work-single.html" class="btn-view">Case Study</a></p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
+					
+			
+
+				
 					
 				</div>
 			</div>
 		</div>
 
-		<div id="colorlib-subscribe">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
-						<h2>Subscribe Newsletter</h2>
-						<p>Subscribe our newsletter and get latest update</p>
-					</div>
-				</div>
-				<div class="row animate-box">
-					<div class="col-md-6 col-md-offset-3">
-						<div class="row">
-							<div class="col-md-12">
-								<form class="form-inline qbstp-header-subscribe">
-									<div class="col-three-forth">
-										<div class="form-group">
-											<input type="text" class="form-control" id="email" placeholder="Enter your email">
-										</div>
-									</div>
-									<div class="col-one-third">
-										<div class="form-group">
-											<button type="submit" class="btn btn-primary">Subscribe Now</button>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
+		
 		<footer class="colorlib-footer">
 			<div class="container">
-				<div class="row">
+				<div class="row row-padded-bottom">
 					<div class="col-md-6">
-						<h3>Lets Talk</h3>
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text</p>
-						<p class="btn-footer"><a href="#">Tell us about your project</a></p>
+						<h3>Mos ngurro</h3>
+						<p>Ndonjehere te thuash te verteten, nuk do te thot humbje e vendit te punes, perkundrazi do te thote ngritje e vedijes per te drejtat qe ti i posedon si nje punetor i denjet</p>
+						<p class="btn-footer"><a href="#">Raporto</a></p>
 					</div>
 					<div class="col-md-6 info">
 						<h3>Info</h3>
-						<p>Email: <strong><a href="#">youremail@mail.com</a></strong></p>
-						<p>Phone: <strong><a href="#">(+00) 9876 5432</a></strong></p>
-						<p>Address: <strong>291 South 21th Street, <br> Suite 721 New York NY 10016</strong></p>
+						<p>Email: <strong><a href="#">2ek@mail.com</a></strong></p>
+						<p>Tel: <strong><a href="#">(+383) 44 123 123</a></strong></p>
+						<p>Adresa: <strong>Rruga 24 Hajdin Demiri, <br> Viti, Kosove</strong></p>
 						<p class="colorlib-social-icons">
 							<span><a href="#"><i class="icon-social-facebook"></i>Facebook</a></span>
 							<span><a href="#"><i class="icon-social-twitter"></i>Twitter</a></span>
-							<span><a href="#"><i class="icon-social-dribbble"></i>Dribbble</a></span>
+							<span><a href="#"><i class="icon-social-dribbble"></i>Instagram</a></span>
 						</p>
 					</div>
 				</div>
@@ -360,15 +173,13 @@
 					<div class="col-md-4 col-md-offset-4 text-center">
 						<p>
 							<small class="block">&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></small> 
-							<small class="block">Demo Images: <a href="http://unsplash.co/" target="_blank">Unsplash</a> , <a href="https://www.pexels.com/" target="_blank">Pexels</a></small>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved 
+<!-- Li
 						</p>
 					</div>
 				</div>
 			</div>
 		</footer>
-	
 	</div>
 
 	<!-- jQuery -->
